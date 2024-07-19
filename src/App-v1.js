@@ -43,7 +43,7 @@ export default function App() {
       try {
         setLoading(true)
         setError('')
-        const Data = await fetch(`http://www.omdbapi.com/?apikey=${Key}&s=${query}`
+        const Data = await fetch(`https://www.omdbapi.com/?apikey=${Key}&s=${query}`
           , { signal: controller.signal });
         if (!Data.ok) throw new Error("Something went wrong with fetching movie")
         const json = await Data.json();
